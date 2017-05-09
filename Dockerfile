@@ -1,10 +1,10 @@
 FROM        alpine:3.2
 MAINTAINER Jeff Siqueira <root@kee7a.com>
 
-ENV CORE etcd-v3.1.5-linux-amd64
+ENV CORE etcd-v3.1.7-linux-amd64
 
 RUN         apk add --update ca-certificates openssl tar && \
-            wget https://github.com/coreos/etcd/releases/download/v3.1.5/${CORE}.tar.gz && \
+            wget https://github.com/coreos/etcd/releases/download/v3.1.7/${CORE}.tar.gz && \
             tar xzvf ${CORE}.tar.gz && \
             mv ${CORE}/etcd* /bin/ && \
             apk del --purge tar openssl && \
